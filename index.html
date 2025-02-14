@@ -1,202 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV BEJAA INPUT DATA</title>
     <style>
-        * {
-    margin: 0;
-    padding: 0;
-}
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-body {
-    background-color: rgb(39, 39, 39);
-    font-family: Arial, Helvetica, sans-serif;
-}
+      body {
+        background-color: rgb(39, 39, 39);
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-h1, p{
-    color: white;
-}
+      h1,
+      p {
+        color: white;
+      }
 
-p {
-    font-size: 20px;
-}
+      p {
+        font-size: 20px;
+      }
 
-h1 {
-    text-align: center;
-    font-size: 80px;
-}
+      h1 {
+        text-align: center;
+        font-size: 80px;
+      }
 
+      input,
+      select {
+        margin-bottom: 20px;
+        width: 500px;
+        height: 30px;
+      }
 
-input, select {
-    margin-bottom: 20px;
-    width: 500px;
-    height: 30px;
-}
+      form {
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+        background-color: rgb(29, 29, 29);
+        border-radius: 40px;
+        padding: 40px;
+      }
 
-form {
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-    background-color: rgb(29, 29, 29);
-    border-radius: 40px;
-    padding: 40px;
-}
+      .container {
+        width: 600px;
+        margin: 20px auto;
+        box-sizing: border-box;
+      }
 
-.container {
-    width: 600px;
-    margin: 20px auto;
-    box-sizing: border-box;
-}
+      .btn {
+        display: inline-block;
+        margin: auto;
+        text-align: center;
+        width: 100px;
+        height: 50px;
+        background-color: green;
+        border-radius: 30px;
+        font-size: 20px;
+        padding: 10px;
+        cursor: pointer;
+        color: white;
+      }
 
-.btn {
-    display:inline-block;
-    margin: auto;
-    text-align: center;
-    width: 100px;
-    height: 50px;
-    background-color: green;
-    border-radius: 30px;
-    font-size: 20px;
-    padding: 10px;
-    cursor: pointer;
-    color: white;
-}
+      .pesan {
+        display: none;
+        width: 200px;
+        margin: auto;
+        margin-bottom: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+        border-radius: 20px;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        background-color: rgb(1, 161, 1);
+        animation-name: fade;
+        animation-duration: 1s;
+      }
 
-.pesan {
-    display: none;
-    width: 200px;
-    margin: auto;
-    margin-bottom: 20px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-    border-radius: 20px;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    background-color: rgb(1, 161, 1);
-    animation-name: fade;
-    animation-duration: 1s;
-}
+      a {
+        text-decoration: none;
+      }
 
-a {
-    text-decoration: none;
-}
+      .undisplay {
+        display: none;
+      }
 
-.undisplay {
-    display: none;
-}
-
-@keyframes fade{
-    from{
-        opacity: 0;
-    }to{
-        opacity: 1;
-    }
-}
+      @keyframes fade {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>CV BEJAA</h1>
-        <form name="submit-to-google-sheet" action="">
-            <p>Tanggal :</p>
-            <input type="date" name="Tanggal" required>
-            <p>Nama Pelanggan :</p>
-            <input type="text" name="Nama Pelanggan" required>
-            <p>Harga Per KG :</p>
-            <input id="perkg" type="number" name="Harga Per Kg" required> 
-            <p>Total yang dibeli :</p>
-            <input id="total" type="number" name="Jumlah" required> 
-            <p>Jenis Telur :</p>
-            <select name="Jenis" id="">
-                <option value="Telur Baik">Telur Baik</option>
-                <option value="Telur Kecil">Telur Kecil</option>
-                <option value="Telur Jumbo">Telur Jumbo</option>
-                <option value="Telur Retak">Telur Retak</option>
-            </select> 
-            <p>Total Harga :</p>
-            <input id="totalharga" type="number" name="Penjualan" required> 
-            <p>Status :</p>
-            <select name="Status" id="status">
-                <option value="Lunas">Lunas</option>
-                <option value="Belum Lunas">Belum Lunas</option>
-            </select>
-            <p class="undisplay">Hutang :</p>
-            <input class="undisplay" id="hutang" type="text" name="Hutang" > 
-            <p class="undisplay">Uang Mama :</p>
-            <input class="undisplay" id="uangmama" type="text" name="Uang MAMA" > 
-            <button class="btn" type="submit" refresh>INPUT</button>
-                <div id="pesan" class="pesan">
-                    <h3>TERKIRIM !!!</h3>
-                    <a target="_blank" href="https://docs.google.com/spreadsheets/d/1Xo6uyocKbQV7s9Mv0TFJpc4bb-kula7gCh9u_J6XJvw/edit#gid=0"><p>klik saya untuk google sheet</p></a>
-                </div>
-
-
-        </form>
+      <h1>CV BEJAA</h1>
+      <form name="submit-to-google-sheet" action="">
+        <p>Tanggal :</p>
+        <input type="date" name="Tanggal" required />
+        <p>Nama Pelanggan :</p>
+        <input type="text" name="Nama Pelanggan" required />
+        <p>Harga Per KG :</p>
+        <input id="perkg" type="number" name="Harga Per Kg" required />
+        <p>Total yang dibeli :</p>
+        <input id="total" type="number" name="Jumlah" required />
+        <p>Jenis Telur :</p>
+        <select name="Jenis" id="">
+          <option value="Telur Baik">Telur Baik</option>
+          <option value="Telur Kecil">Telur Kecil</option>
+          <option value="Telur Jumbo">Telur Jumbo</option>
+          <option value="Telur Retak">Telur Retak</option>
+        </select>
+        <p>Total Harga :</p>
+        <input id="totalharga" type="number" name="Penjualan" required />
+        <p>Status :</p>
+        <select name="Status" id="status">
+          <option value="Lunas">Lunas</option>
+          <option value="Belum Lunas">Belum Lunas</option>
+        </select>
+        <p class="undisplay">Hutang :</p>
+        <input class="undisplay" id="hutang" type="text" name="Hutang" />
+        <p class="undisplay">Uang Mama :</p>
+        <input class="undisplay" id="uangmama" type="text" name="Uang MAMA" />
+        <button class="btn" type="submit" refresh>INPUT</button>
+        <div id="pesan" class="pesan">
+          <h3>TERKIRIM !!!</h3>
+          <a
+            target="_blank"
+            href="https://docs.google.com/spreadsheets/d/1Xo6uyocKbQV7s9Mv0TFJpc4bb-kula7gCh9u_J6XJvw/edit#gid=0"
+            ><p>klik saya untuk google sheet</p></a
+          >
+        </div>
+      </form>
     </div>
 
-    
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzpw7TcoSCW9xMuJXTv8xoLEsLAJo9KYd-IvN6oryfhZUCV6aMdietfpRjACaWQZkHBGA/exec'
-        const form = document.forms['submit-to-google-sheet']
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycby2Tgindyo7K_hCyJ3Nk9DU33tJIhWgmfhSS_5LgsSGBwjVlbYiN8OLJQ2NnDfmyFXy/exec";
+      const form = document.forms["submit-to-google-sheet"];
 
-        form.addEventListener('submit', e => {
-        e.preventDefault()
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-            pesan.style.display = 'block'
+        pesan.style.display = "block";
 
-            if(status.value == 'Lunas'){
-            hutang.value = 0
-            uangmama.value = totalharga.value
-            }else {
-            hutang.value = totalharga.value
-            uangmama.value = 0
+        if (status.value == "Lunas") {
+          hutang.value = 0;
+          uangmama.value = totalharga.value;
+        } else {
+          hutang.value = totalharga.value;
+          uangmama.value = 0;
         }
-            
 
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
 
-            form.reset();
-        })
+        form.reset();
+      });
 
-        // rumus
-        const perkg = document.getElementById('perkg')
-        const total = document.getElementById('total')
-        const totalharga = document.getElementById('totalharga')
-        const status = document.getElementById('status')
-        const hutang = document.getElementById('hutang')
-        const uangmama = document.getElementById('uangmama')
+      // rumus
+      const perkg = document.getElementById("perkg");
+      const total = document.getElementById("total");
+      const totalharga = document.getElementById("totalharga");
+      const status = document.getElementById("status");
+      const hutang = document.getElementById("hutang");
+      const uangmama = document.getElementById("uangmama");
 
-        total.addEventListener('keyup', function(){
-            totalharga.value = perkg.value * total.value
-        })
+      total.addEventListener("keyup", function () {
+        totalharga.value = perkg.value * total.value;
+      });
 
-        perkg.addEventListener('keyup', function(){
-            totalharga.value = perkg.value * total.value
-        })
+      perkg.addEventListener("keyup", function () {
+        totalharga.value = perkg.value * total.value;
+      });
 
-
-        // NIBBA I KNOW U SEE THIS FK OFF M8
-        // NIBBA I KNOW U SEE THIS FK OFF M8
-        // NIBBA I KNOW U SEE THIS FK OFF M8
-        // NIBBA I KNOW U SEE THIS FK OFF M8
-        // NIBBA I KNOW U SEE THIS FK OFF M8
-        let password = 0;
-        while(password == false){
-            password = prompt('MASUKKAN PASSWORD')
-            if(password == "12345"){
-                password = true
-            }else {
-                password = false
-            }
+      // NIBBA I KNOW U SEE THIS FK OFF M8
+      // NIBBA I KNOW U SEE THIS FK OFF M8
+      // NIBBA I KNOW U SEE THIS FK OFF M8
+      // NIBBA I KNOW U SEE THIS FK OFF M8
+      // NIBBA I KNOW U SEE THIS FK OFF M8
+      let password = 0;
+      while (password == false) {
+        password = prompt("MASUKKAN PASSWORD");
+        if (password == "12345") {
+          password = true;
+        } else {
+          password = false;
         }
-        // NIBBA I KNOW U SEE THIS FK OFF M8
-        // NIBBA I KNOW U SEE THIS FK OFF M8
-        // NIBBA I KNOW U SEE THIS FK OFF M8
-        // NIBBA I KNOW U SEE THIS FK OFF M8
-        // NIBBA I KNOW U SEE THIS FK OFF M8
+      }
+      // NIBBA I KNOW U SEE THIS FK OFF M8
+      // NIBBA I KNOW U SEE THIS FK OFF M8
+      // NIBBA I KNOW U SEE THIS FK OFF M8
+      // NIBBA I KNOW U SEE THIS FK OFF M8
+      // NIBBA I KNOW U SEE THIS FK OFF M8
     </script>
-</body>
+  </body>
 </html>
